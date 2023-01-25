@@ -30,6 +30,7 @@ body{
     background-color: black;
     color: white;
     display: flex;
+    text-align: center;
     align-items: center;
     gap: 10px;
     flex-direction: column;
