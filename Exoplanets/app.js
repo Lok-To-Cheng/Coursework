@@ -31,5 +31,3 @@ app.post('/exoplanet/new', function (req, resp) {
 });
 
 module.exports = app;
-
-module.exports = app;
