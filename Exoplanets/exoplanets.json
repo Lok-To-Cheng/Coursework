@@ -1,1 +1,13 @@
-{"Kepler 22b":"Vast ocean world","HD 189733b":"It is a tidally locked hot-Jupiter that rains molten glass, sideways"}
+{ 
+"Kepler 22b" : { "category" : "Ocean World", 
+                   "distance" : "620 ly",
+                   "description"  : "It is in the habitable zone."},  
+
+"HD 189733b" : { "category" : "Hot Jupiter", 
+                   "distance" : "64.5 ly",
+                   "description"  : "It rains molten glass sideways."}, 
+
+"J1407b" : { "category" : "Gas Giant/Brown Dwarf", 
+              "distance" : "434 ly",
+              "description"  : "It has rings up to 200 times as large as Saturn's."}
+} 

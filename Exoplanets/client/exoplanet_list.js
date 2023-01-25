@@ -7,9 +7,14 @@ async function listExoplanets () {
     const exoplanetListElt = document.getElementById('exoplanetList');
     let list = '';
     for (const exoplanetName of exoplanetNames) {
-        list += `<li class='exoplanet_list_item'>${exoplanetName}</li>`;
+        list += `<li class='exoplanet_list_item'>${exoplanetName}<ul class='exoplanet_cat'></ul></li>`;
     }
     exoplanetListElt.innerHTML = list;
+    const size = Object.keys(exoplanetNames).length;
+    for (let i=0; i<size; i++){
+        const exoplanetInfo = await fetch(endpointRoot + 'Exoplanets');
+        const exoplanetInfoData = await exoplanetResponse.text();
+    }
     const listItems = document.querySelectorAll('.exoplanet_list_item');
     for (const listItem of listItems) {
         listItem.addEventListener('click', (event) => loadexoplanet(event.target.textContent));
