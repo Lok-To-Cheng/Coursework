@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <title>
+        Interesting Exoplanets
+    </title>
+    <meta name="viewport"
+		content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="navlist">
+	<a href="#">Home</a>
+    <a href="exoplanets">List of exoplanets</a>
+</div>
+
+<div class="content">
+
+  <h1 style="color:teal; padding-top:40px; text-align:center;">
+		Interesting Exoplanets
+	</h1>
+
+    <h2>Exoplanetary Hall of Fame</h2>
+
+    <p>Click on one of the exoplanet names to see fun facts about them
+    <ul id='exoplanetList'></ul>
+    </p>
+    <div id="exoplanet-info"></div>
+
+    <h2>Add a new exoplanet</h2>
+    <form id="new-exoplanet-info">
+      <p>exoplanet name: <input name="name"></p>
+      <p>information: </p>
+      <textarea name="information" rows="3" cols="50"></textarea>
+      <input type='submit'>
+    </form>
+  </main>
+  <footer class="pt-5 my-5 text-muted border-top">
+    <div class="container text-center">
+      <p>Created in part by the Bootstrap team &middot; &copy; 2022 | <a href="#top">Back to top</a></p>
+    </div>
+  </footer>
+</div>
+
+
+    <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="exoplanet_list.js"></script>
+
+      
+  </body>
+</html>
