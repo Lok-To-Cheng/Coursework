@@ -1,7 +1,7 @@
 const endpointRoot = 'http://127.0.0.1:8090/';
 
 async function listExoplanets () {
-    const exoplanetResponse = await fetch(endpointRoot + 'Exoplanets');
+    const exoplanetResponse = await fetch(endpointRoot + 'exoplanets');
     const exoplanetNamesText = await exoplanetResponse.text();
     const exoplanetNames = JSON.parse(exoplanetNamesText);
     const exoplanetListElt = document.getElementById('exoplanetList');
@@ -18,8 +18,12 @@ async function listExoplanets () {
 
 async function loadexoplanet (exoplanetName) {
     const exoplanetResponse = await fetch(`http://127.0.0.1:8090/exoplanet/${exoplanetName}`);
-    const exoplanetContent = await exoplanetResponse.text();
-    document.getElementById('exoplanet-info').innerHTML = exoplanetContent;
+    console.log(exoplanetResponse);
+    const exoplanetContentText = await exoplanetResponse.text();
+    const exoplanetContent = JSON.parse(exoplanetContentText);
+    document.getElementById('exoplanetCategory').innerHTML = exoplanetContent.category;
+    document.getElementById('exoplanetDistance').innerHTML = exoplanetContent.distance;
+    document.getElementById('exoplanetDesc').innerHTML = exoplanetContent.desc;
 }
 
 async function addExoplanets () {

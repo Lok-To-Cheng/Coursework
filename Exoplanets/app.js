@@ -13,7 +13,6 @@ const exoplanets = require(fileNameForJSON);
 app.get('/exoplanet/:exoplanet', function (req, resp) {
     const exoplanet = req.params.exoplanet;
     const information = exoplanets[exoplanet];
-
     resp.send(information);
 });
 
@@ -24,8 +23,13 @@ app.get('/exoplanets', function (req, resp) {
 
 app.post('/exoplanet/new', function (req, resp) {
     const name = req.body.name;
-    const information = req.body.information;
-    exoplanets[name] = information;
+    const category = req.body.category;
+    const distance = req.body.distance;
+    const desc = req.body.desc;
+    exoplanets[name] = {"category":"","distance":"","desc":""};
+    exoplanets[name].category = category;
+    exoplanets[name].distance = distance;
+    exoplanets[name].desc = desc;
     fs.writeFileSync(fileNameForJSON, JSON.stringify(exoplanets));
     resp.send(exoplanets);
 });

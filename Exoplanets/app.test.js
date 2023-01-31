@@ -31,7 +31,7 @@ describe('Exoplanets list testing', () => {
     });
 
     test('POST /exoplanet/new', () => {
-        const params = { name: 'HD 189733b', information: 'It is a tidally locked hot-Jupiter that rains molten glass, sideways' };
+        const params = { name: "HD 189733b", category: "Gas Giant", distance: "64.5 ly", desc: "It rains molten glass, sideways"};
         return request(app)
         .post('/exoplanet/new')
         .send(params)

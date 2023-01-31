@@ -42,8 +42,10 @@
     <h2>Add a new exoplanet</h2>
     <form id="new-exoplanet-info">
       <p>Exoplanet name: <input name="name"></p>
+      <p>Category: <input name="category"></p>
+      <p>Distance (from Earth): <input name="distance"></p>
       <p>Description: </p>
-      <textarea name="information" rows="3" cols="50"></textarea>
+      <textarea name="desc" rows="3" cols="50"></textarea>
       <input type="submit">
     </form>
 
@@ -52,7 +54,9 @@
     <p>Click on one of the exoplanet names to see fun facts about them</p>
     <p><ul id="exoplanetList"></ul>
     </p>
-    <div id="exoplanet-info"></div>
+    <div>Category: <span id="exoplanetCategory"></span></div>
+    <div>Distance (from Earth): <span id="exoplanetDistance"></span></div>
+    <div>Fun facts (for nerds): <span id="exoplanetDesc"></span></div>
 
   </main>
 
